@@ -1,11 +1,19 @@
 :root {
   --ms-header-h: 70px;
 
+  --ms-gray: #E5E5E5;
   --ms-gray-l: #F8F9FA;
   --ms-blue-d: #051E34;
+  --ms-orange: #FF8F00;
 }
 /* UTILITY */
+.ms-bg-gray{
+  background-color: var(--ms-gray);
+}
 
+.ms-text-orange{
+  color: var(--ms-orange);
+}
 
 /* COMPONENTS */
 
@@ -27,6 +35,10 @@ body{
 .header{
   width: 100%;
   height: var(--ms-header-h);
+}
+
+.header .navbar-brand {
+  width: 25px;
 }
 
 /* ASIDE */
@@ -52,6 +64,9 @@ body{
 }
 /* breakpoints Large*/
 @media (min-width: 992px) {
+  .header .navbar-brand {
+    width: initial;
+  }
   /* ASIDE */
   .aside{
     width: 150px;
