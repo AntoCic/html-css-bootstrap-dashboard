@@ -1,10 +1,11 @@
 :root {
-  --bg-blue-d: #051E34;
+  --ms-header-h: 70px;
+
+  --ms-gray-l: #F8F9FA;
+  --ms-blue-d: #051E34;
 }
 /* UTILITY */
-.bg-blue-d {
-  background-color: var(--bg-blue-d);
-}
+
 
 /* COMPONENTS */
 
@@ -15,21 +16,59 @@ body{
   font-family:Arial, Helvetica, sans-serif;
 }
 
+#app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  background-color: var(--ms-gray-l);
+}
 /* HEADER */
+.header{
+  width: 100%;
+  height: var(--ms-header-h);
+}
+
+/* ASIDE */
+.aside{
+  width: 65px;
+  flex-shrink: 0;  
+  height:calc(100vh - var(--ms-header-h));
+  background-color: #051E34;
+  background-image: url("../img/sidebar-bg.png");
+  background-size: cover;
+  color: white;
+}
 
 /* MAIN */
+.main{
+  flex-grow: 1;
+}
 
-/* FOOTER */
+/*************************************************
+    MEDIA RESPONSIVE
+ *************************************************/
+/* breakpoints Medium*/
+@media (min-width: 768px) {
+  /* ASIDE */
+
+  /* MAIN */
+}
+/* breakpoints Large*/
+@media (min-width: 992px) {
+  /* ASIDE */
+  .aside{
+    width: 150px;
+  }
+  /* MAIN */
+}
 
  /*************************************************
     DEBUG
  *************************************************/
- .debug :is(header, main, footer){
-  border: 2px solid rgb(0, 250, 0);
-}
-
-.debug .container {
-  border: 1px dashed rgba(250, 0, 0, 0.3);
+ .debug :is(header, main, aside){
+  border: 10px dashed rgba(250, 0, 0, 0.3);
 }
 
 .debug .row {
