@@ -14,13 +14,56 @@
 <body class="debg">
     <div id="app">
         <header class="header">
-            <div class="h1">header</div>
+            <nav class="navbar navbar-expand-sm">
+                <div class="container-fluid">
+
+                    <a class="navbar-brand" href="#"><img src="./img/logo.svg" alt="logo"></a>
+
+                    <form class="flex-grow-1" role="search">
+                        <div class="input-group">
+                            <span class="input-group-text bg-white border-end-0 " id="basic-addon1">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                            <input type="text" class="form-control border-start-0 py-2 " placeholder="Username"
+                                aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                    </form>
+
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-bell"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
         </header>
-        <div class="d-flex flex-grow-1">
-            <aside class="aside flex-shrik-0">
-                <div class="h1">aside</div>
+        <div class="d-flex flex-grow-1 ">
+            <aside class="aside flex-shrik-0 py-3 d-flex flex-column align-items-center">
+                <div>
+                    <i class="fa-solid fa-house"></i>
+                    <p class="d-none d-lg-inline"> Home</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <p class="d-none d-lg-inline"> Stats</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-signal"></i>
+                    <p class="d-none d-lg-inline"> Signal</p>
+                </div>
+                
+                <div class="mt-auto">
+                    <i class="fa-solid fa-gear"></i>
+                    <p class="d-none d-lg-inline"> Admin</p>
+                </div>
             </aside>
-    
             <main class="main flex-grow-1">
                 <div class="container-fluid">
                     <div class="row bg-primary">
@@ -34,16 +77,16 @@
                             <h5>Studenti online negli ultimi 30 minuti</h5>
                         </div>
                     </div>
-    
+
                     <div class="row">
                         <div class="col-12 col-lg-8">
                             <div class="h1">list 1</div>
                         </div>
                         <div class="col-12 col-lg-4">
                             <div class="h1">list 2</div>
-                        </div>                    
+                        </div>
                     </div>
-    
+
                 </div>
             </main>
 
