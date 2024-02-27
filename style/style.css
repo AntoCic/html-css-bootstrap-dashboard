@@ -39,19 +39,24 @@ body{
 
 .header .navbar-brand {
   width: 25px;
+  transition: width 0.3s;
 }
 
 /* ASIDE */
 .aside{
   width: 65px;
+  flex-shrink: 0;
   background-color: #051E34;
   background-image: url("../img/sidebar-bg.png");
   background-size: cover;
   color: white;
+  transition: width 0.3s;
 }
 
 /* MAIN */
-
+.ms_tab-ico{
+  width: 30px;
+}
 
 /*************************************************
     MEDIA RESPONSIVE
@@ -65,7 +70,7 @@ body{
 /* breakpoints Large*/
 @media (min-width: 992px) {
   .header .navbar-brand {
-    width: initial;
+    width: 133px;
   }
   /* ASIDE */
   .aside{
