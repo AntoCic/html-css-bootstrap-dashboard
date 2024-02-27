@@ -18,18 +18,58 @@
 <body class="debg">
     <div id="app">
         <header class="header d-flex align-items-center">
-            <nav class="flex-grow-1 navbar navbar-expand-sm">
-                <div class="container-fluid">
+            <div class="bg-white d-flex align-items-center w-100 ">
+                <a class="navbar-brand ms_logo-header mx-3" href="#"><img src="./img/logo.svg" alt="logo"></a>
 
-                    <a class="navbar-brand object-fit-cover gx-2 ms-2" href="#"><img src="./img/logo.svg"
+                <form class="input-group flex-grow-1 mx-1">
+                    <span class="input-group-text border-0 ms_bg-gray pe-1" id="search_header">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    <input type="text" class="form-control border-0 py-2 ms_bg-gray ps-1"
+                        placeholder="Prova a cercare: Lezioni di laravel" aria-describedby="search_header">
+                </form>
+
+                <ul class="d-contents list-unstyled">
+                    <li class="d-none d-lg-initial">
+                        <button type="button" class="btn btn-lg text-secondary">
+                            <i class="fa-solid fa-list"></i>
+                        </button>
+                    </li>
+                    <li class="d-none d-lg-initial">
+                        <button type="button" class="btn btn-lg text-secondary">
+                            <i class="fa-solid fa-circle-question"></i>
+                        </button>
+                    </li>
+                    <li class="d-none d-lg-initial">
+                        <button type="button" class="btn btn-lg text-secondary">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-lg ms_text-orange" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-bell"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><button class="dropdown-item" type="button">Action</button></li>
+                            <li><button class="dropdown-item" type="button">Another action</button></li>
+                            <li><button class="dropdown-item" type="button">Something else here</button></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- <nav class="flex-grow-1 navbar navbar-expand-sm">
+                <div class="container-fluid">
+                    <a class="navbar-brand ms_logo-header gx-2 ms-2" href="#"><img src="./img/logo.svg"
                             alt="logo"></a>
 
                     <form class="flex-grow-1" role="search">
                         <div class="input-group">
-                            <span class="input-group-text ms-bg-gray pe-1" id="basic-addon1">
+                            <span class="input-group-text ms_bg-gray pe-1" id="basic-addon1">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </span>
-                            <input type="text" class="form-control py-2 ms-bg-gray ps-1"
+                            <input type="text" class="form-control py-2 ms_bg-gray ps-1"
                                 placeholder="Prova a cercare: Lezioni di laravel" aria-label="search"
                                 aria-describedby="basic-addon1">
                         </div>
@@ -46,7 +86,7 @@
                         </button>
                     </div>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-lg ms-text-orange" data-bs-toggle="dropdown"
+                        <button type="button" class="btn btn-lg ms_text-orange" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <i class="fa-solid fa-bell"></i>
                         </button>
@@ -57,28 +97,32 @@
                         </ul>
                     </div>
                 </div>
-            </nav>
+            </nav> -->
 
         </header>
         <div class="d-flex flex-grow-1 ">
             <aside class="aside flex-shrik-0 py-3 d-flex flex-column align-items-center">
-                <div>
-                    <i class="fa-solid fa-house"></i>
-                    <p class="d-none d-lg-inline"> Home</p>
-                </div>
-                <div>
-                    <i class="fa-solid fa-chart-simple"></i>
-                    <p class="d-none d-lg-inline"> Stats</p>
-                </div>
-                <div>
-                    <i class="fa-solid fa-signal"></i>
-                    <p class="d-none d-lg-inline"> Signal</p>
-                </div>
+                <nav class="d-contents">
+                    <ul class="d-contents list-unstyled fs-5">
+                        <li>
+                            <i class="fa-solid fa-house"></i>
+                            <p class="d-none d-lg-inline ps-2">Home</p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-chart-simple"></i>
+                            <p class="d-none d-lg-inline ps-2">Stats</p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-signal"></i>
+                            <p class="d-none d-lg-inline ps-2">Signal</p>
+                        </li>
 
-                <div class="mt-auto">
-                    <i class="fa-solid fa-gear"></i>
-                    <p class="d-none d-lg-inline"> Admin</p>
-                </div>
+                        <li class="mt-auto">
+                            <i class="fa-solid fa-gear"></i>
+                            <p class="d-none d-lg-inline ps-2">Admin</p>
+                        </li>
+                    </ul>
+                </nav>
             </aside>
 
             <main class="main flex-grow-1">
@@ -344,6 +388,7 @@
 
                 </div>
             </main>
+
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
                 aria-labelledby="offcanvasRightLabel">
                 <div class="offcanvas-header">
@@ -400,7 +445,7 @@
                                 <input class="form-control" type="file" id="photo">
                             </div>
                             <div class="col-12">
-                                <input class="form-check-input" type="checkbox"  id="checkbox_10">
+                                <input class="form-check-input" type="checkbox" id="checkbox_10">
                                 <label class="form-check-label" for="checkbox_10">
                                     Seleziona per proseguire
                                 </label>
@@ -409,9 +454,9 @@
                                     <button type="reset" class="btn btn-warning">Svuota</button>
                                 </div>
                                 <div>
-                                    
+
                                 </div>
-                                
+
                             </div>
                         </form>
                     </div>

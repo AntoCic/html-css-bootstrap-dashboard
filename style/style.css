@@ -1,18 +1,25 @@
 :root {
   --ms-header-h: 70px;
 
-  --ms-gray: #E5E5E5;
-  --ms-gray-l: #F8F9FA;
-  --ms-blue-d: #051E34;
-  --ms-orange: #FF8F00;
+  --ms_gray: #e5e5e5;
+  --ms_gray-l: #f8f9fa;
+  --ms_blue-l: #1b72e8;
+  --ms_orange: #ff8f00;
 }
 /* UTILITY */
-.ms-bg-gray{
-  background-color: var(--ms-gray);
+.ms_bg-gray {
+  background-color: var(--ms_gray);
+}
+.ms_blue-l {
+  background-color: var(--ms_blue-l);
 }
 
-.ms-text-orange{
-  color: var(--ms-orange);
+.ms_text-orange {
+  color: var(--ms_orange);
+}
+
+.d-contents {
+  display: contents !important;
 }
 
 /* COMPONENTS */
@@ -20,8 +27,8 @@
 /*************************************************
     GENERAL STYLES
  *************************************************/
-body{
-  font-family:Arial, Helvetica, sans-serif;
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #app {
@@ -32,21 +39,22 @@ body{
   background-color: var(--ms-gray-l);
 }
 /* HEADER */
-.header{
+.header {
   width: 100%;
-  height: var(--ms-header-h);
+  min-height: var(--ms-header-h);
 }
 
-.header .navbar-brand {
-  width: 25px;
+.ms_logo-header {
+  object-fit: cover;
+  width: 20px;
   transition: width 0.3s;
 }
 
 /* ASIDE */
-.aside{
+.aside {
   width: 65px;
   flex-shrink: 0;
-  background-color: #051E34;
+  background-color: #051e34;
   background-image: url("../img/sidebar-bg.png");
   background-size: cover;
   color: white;
@@ -54,7 +62,7 @@ body{
 }
 
 /* MAIN */
-.ms_tab-ico{
+.ms_tab-ico {
   width: 30px;
 }
 
@@ -69,20 +77,24 @@ body{
 }
 /* breakpoints Large*/
 @media (min-width: 992px) {
-  .header .navbar-brand {
+  .d-lg-initial {
+    display: initial !important;
+  }
+
+  .ms_logo-header {
     width: 133px;
   }
   /* ASIDE */
-  .aside{
+  .aside {
     width: 150px;
   }
   /* MAIN */
 }
 
- /*************************************************
+/*************************************************
     DEBUG
  *************************************************/
- .debug :is(header, main, aside){
+.debug :is(header, main, aside) {
   border: 10px dashed rgba(250, 0, 0, 0.3);
 }
 
@@ -93,4 +105,3 @@ body{
 .debug [class^="col"] {
   background-color: #daa52062;
 }
-
